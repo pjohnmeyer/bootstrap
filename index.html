@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" href="assets/favicon.ico" />
     <title>Angular directives for Bootstrap</title>
-    <meta name="description" content="AngularJS (Angular) native directives for Bootstrap. Small footprint (5kB gzipped!), no 3rd party JS dependencies (jQuery, bootstrap JS) required! Widgets: Accordion, Alert, Buttons, Carousel, Collapse, Dateparser, Datepicker, Dropdown, Modal, Pager, Pagination, Popover, Position, Progressbar, Rating, Tabs, Timepicker, Tooltip, Typeahead, ">
+    <meta name="description" content="AngularJS (Angular) native directives for Bootstrap. Small footprint (5kB gzipped!), no 3rd party JS dependencies (jQuery, bootstrap JS) required! Widgets: Accordion, Alert, Buttons, Carousel, Collapse, Dateparser, Datepicker, Datepicker Popup, Dropdown, Modal, Pager, Pagination, Popover, Position, Progressbar, Rating, Tabs, Timepicker, Tooltip, Typeahead, ">
     <meta name="google-site-verification" content="7lc5HyceLDqpV_6oNHteYFfxDJH7-S3DwnJKtNUKcRg" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.0.0/FileSaver.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
-    <script src="ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.js"></script>
+    <script src="ui-bootstrap-tpls-2.0.1.min.js"></script>
     <script src="assets/plunker.js"></script>
     <script src="assets/app.js"></script>
 
@@ -46,7 +46,7 @@
                         Directives <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#accordion">Accordion</a></li><li><a href="#alert">Alert</a></li><li><a href="#buttons">Buttons</a></li><li><a href="#carousel">Carousel</a></li><li><a href="#collapse">Collapse</a></li><li><a href="#dateparser">Dateparser</a></li><li><a href="#datepicker">Datepicker</a></li><li><a href="#dropdown">Dropdown</a></li><li><a href="#modal">Modal</a></li><li><a href="#pager">Pager</a></li><li><a href="#pagination">Pagination</a></li><li><a href="#popover">Popover</a></li><li><a href="#position">Position</a></li><li><a href="#progressbar">Progressbar</a></li><li><a href="#rating">Rating</a></li><li><a href="#tabs">Tabs</a></li><li><a href="#timepicker">Timepicker</a></li><li><a href="#tooltip">Tooltip</a></li><li><a href="#typeahead">Typeahead</a></li>
+                        <li><a href="#accordion">Accordion</a></li><li><a href="#alert">Alert</a></li><li><a href="#buttons">Buttons</a></li><li><a href="#carousel">Carousel</a></li><li><a href="#collapse">Collapse</a></li><li><a href="#dateparser">Dateparser</a></li><li><a href="#datepicker">Datepicker</a></li><li><a href="#datepickerPopup">Datepicker Popup</a></li><li><a href="#dropdown">Dropdown</a></li><li><a href="#modal">Modal</a></li><li><a href="#pager">Pager</a></li><li><a href="#pagination">Pagination</a></li><li><a href="#popover">Popover</a></li><li><a href="#position">Position</a></li><li><a href="#progressbar">Progressbar</a></li><li><a href="#rating">Rating</a></li><li><a href="#tabs">Tabs</a></li><li><a href="#timepicker">Timepicker</a></li><li><a href="#tooltip">Tooltip</a></li><li><a href="#typeahead">Typeahead</a></li>
                     </ul>
                 </li>
                 <li><a href="#getting_started">Getting started</a></li>
@@ -84,7 +84,7 @@
             <p>
                 <a class="btn btn-outline-inverse btn-lg" href="https://github.com/angular-ui/bootstrap"><i class="icon-github"></i>Code on Github</a>
                 <button type="button" class="btn btn-outline-inverse btn-lg" ng-click="showDownloadModal()">
-                    <i class="glyphicon glyphicon-download-alt"></i> Download <small>(1.2.5)</small>
+                    <i class="glyphicon glyphicon-download-alt"></i> Download <small>(2.0.1)</small>
                 </button>
                 <button type="button" class="btn btn-outline-inverse btn-lg" ng-click="showBuildModal()"><i class="glyphicon glyphicon-wrench"></i> Create a Build</button>
             </p>
@@ -152,6 +152,8 @@
                         
                             <li><a href="#datepicker">Datepicker</a></li>
                         
+                            <li><a href="#datepickerPopup">Datepicker Popup</a></li>
+                        
                             <li><a href="#dropdown">Dropdown</a></li>
                         
                             <li><a href="#modal">Modal</a></li>
@@ -190,13 +192,13 @@
                         JavaScript is required. The <strong>only required dependencies</strong> are:
                     </p>
                     <ul>
-                        <li><a href="http://angularjs.org" target="_blank">AngularJS</a> (requires AngularJS 1.4.x or higher, tested with 1.5.0).
+                        <li><a href="http://angularjs.org" target="_blank">AngularJS</a> (requires AngularJS 1.4.x or higher, tested with 1.5.5).
                             0.14.3 is the last version of this library that supports AngularJS 1.3.x and
                             0.12.0 is the last version that supports AngularJS 1.2.x.</li>
-                        <li><a href="http://angularjs.org" target="_blank">Angular-animate</a> (the version should match with your angular's, tested with 1.5.0) if you plan in using animations, you need to load angular-animate as well.</li>
-                        <li><a href="http://angularjs.org" target="_blank">Angular-touch</a> (the version should match with your angular's, tested with 1.5.0) if you plan in using swipe actions, you need to load angular-touch as well.</li>
+                        <li><a href="http://angularjs.org" target="_blank">Angular-animate</a> (the version should match with your angular's, tested with 1.5.5) if you plan in using animations, you need to load angular-animate as well.</li>
+                        <li><a href="http://angularjs.org" target="_blank">Angular-touch</a> (the version should match with your angular's, tested with 1.5.5) if you plan in using swipe actions, you need to load angular-touch as well.</li>
                         <li><a href="http://getbootstrap.com" target="_blank">Bootstrap CSS</a> (tested with version 3.3.6).
-                            This version of the library (1.2.5) works only with Bootstrap CSS in version 3.x.
+                            This version of the library (2.0.1) works only with Bootstrap CSS in version 3.x.
                             0.8.0 is the last version of this library that supports Bootstrap CSS in version 2.3.x.
                         </li>
                     </ul>
@@ -209,8 +211,9 @@
                     <p>Alternativelly, if you are only interested in a subset of directives, you can
                         <a ng-click="showBuildModal()">create your own build</a>.
                     </p>
-                    <p>Whichever method you choose the good news that the overall size of a download is very small:
-                       &lt;76kB for all directives (~20kB with gzip compression!)</p>
+                    <p>Whichever method you choose the good news that the overall size of a download is fairly small:
+                       122K minified for all directives with templates and 98K without (~31kB with gzip
+                        compression, with templates, and 28K gzipped without)</p>
                     <h3>Installation</h3>
                     <p>As soon as you've got all the files downloaded and included in your page you just need to declare
                        a dependency on the <code>ui.bootstrap</code> <a href="http://docs.angularjs.org/guide/module">module</a>:<br>
@@ -260,16 +263,17 @@
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="AccordionDemoCtrl">
   <script type="text/ng-template" id="group-template.html">
-    <div class="panel {{panelClass || 'panel-default'}}">
-      <div class="panel-heading">
-        <h4 class="panel-title" style="color:#fa39c3">
-          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
-            ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
-        </h4>
-      </div>
-      <div class="panel-collapse collapse" uib-collapse="!isOpen">
-        <div class="panel-body" style="text-align: right" ng-transclude></div>
-      </div>
+    <div class="panel-heading">
+      <h4 class="panel-title" style="color:#fa39c3">
+        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+          <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+            {{heading}}
+          </span>
+        </a>
+      </h4>
+    </div>
+    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+      <div class="panel-body" style="text-align: right" ng-transclude></div>
     </div>
   </script>
 
@@ -285,30 +289,36 @@
     </label>
   </div>
   <uib-accordion close-others="oneAtATime">
-    <uib-accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+    <div uib-accordion-group class="panel-default" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
       This content is straight in the template.
-    </uib-accordion-group>
-    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+    </div>
+    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups">
       {{group.content}}
-    </uib-accordion-group>
-    <uib-accordion-group heading="Dynamic Body Content">
+    </div>
+    <div uib-accordion-group class="panel-default" heading="Dynamic Body Content">
       <p>The body of the uib-accordion group grows to fit the contents</p>
       <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
       <div ng-repeat="item in items">{{item}}</div>
-    </uib-accordion-group>
-    <uib-accordion-group heading="Custom template" template-url="group-template.html">
+    </div>
+    <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">
       Hello
-    </uib-accordion-group>
-    <uib-accordion-group heading="Delete account" panel-class="panel-danger">
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        Custom template with custom header template <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
+      World
+    </div>
+    <div uib-accordion-group class="panel-danger" heading="Delete account">
       <p>Please, to delete your account, click the button below</p>
       <button class="btn btn-danger">Delete</button>
-    </uib-accordion-group>
-    <uib-accordion-group is-open="status.open">
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.open">
       <uib-accordion-heading>
         I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
       </uib-accordion-heading>
       This is just some content to illustrate fancy headings.
-    </uib-accordion-group>
+    </div>
   </uib-accordion>
 </div>
 
@@ -347,11 +357,6 @@ The clickable text on the group&#39;s header. You need one to be able to click o
 <em>(Default: <code>false</code>)</em> -
 Whether accordion group is open or closed.</p>
 </li>
-<li><p><code>panel-class</code>
-<i class="glyphicon glyphicon-eye-open"></i>
-<em>(Default: <code>panel-default</code>)</em> -
-Add ability to use Bootstrap&#39;s contextual panel classes (panel-primary, panel-success, panel-info, etc...) or your own.  This must be a string.</p>
-</li>
 <li><p><code>template-url</code>
 <em>(Default: <code>uib/template/accordion/accordion-group.html</code>)</em> -
 Add the ability to override the template used on the component.</p>
@@ -361,7 +366,7 @@ Add the ability to override the template used on the component.</p>
 <p>Instead of the <code>heading</code> attribute on the <code>uib-accordion-group</code>, you can use an <code>uib-accordion-heading</code> element inside a group that will be used as the group&#39;s header.</p>
 <p>If you&#39;re using a custom template for the <code>uib-accordion-group</code>, you&#39;ll need to have an element for the heading to be transcluded into using <code>uib-accordion-header</code> (e.g. <code>&lt;div uib-accordion-header&gt;&lt;/div&gt;</code>).</p>
 <h3 id="known-issues">Known issues</h3>
-<p>To use clickable elements within the accordion, you have override the accordion-group template to use div elements instead of anchor elements, and add <code>cursor: pointer</code> in your CSS. This is due to browsers interpreting anchor elements as the target of any click event, which triggers routing when certain elements such as buttons are nested inside the anchor element.</p>
+<p>To use clickable elements within the accordion, you have to override the accordion-group template to use div elements instead of anchor elements, and add <code>cursor: pointer</code> in your CSS. This is due to browsers interpreting anchor elements as the target of any click event, which triggers routing when certain elements such as buttons are nested inside the anchor element.</p>
 <p>If custom classes on the accordion-group element are desired, one needs to either modify the template to remove the <code>ng-class</code> usage in the accordion-group template and use ng-class on the accordion-group element (not recommended), or use an interpolated expression in the class attribute, i.e. <code>&lt;uib-accordion-group class=&quot;{{customClass()}}&quot;&gt;&lt;/uib-accordion-group&gt;</code>.</p>
 
                             </div>
@@ -370,23 +375,24 @@ Add the ability to override the template used on the component.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'accordion')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'accordion')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;AccordionDemoCtrl&quot;&gt;
   &lt;script type=&quot;text/ng-template&quot; id=&quot;group-template.html&quot;&gt;
-    &lt;div class=&quot;panel {{panelClass || &#x27;panel-default&#x27;}}&quot;&gt;
-      &lt;div class=&quot;panel-heading&quot;&gt;
-        &lt;h4 class=&quot;panel-title&quot; style=&quot;color:#fa39c3&quot;&gt;
-          &lt;a href tabindex=&quot;0&quot; class=&quot;accordion-toggle&quot; ng-click=&quot;toggleOpen()&quot; uib-accordion-transclude=&quot;heading&quot;&gt;&lt;span
-            ng-class=&quot;{&#x27;text-muted&#x27;: isDisabled}&quot;&gt;{{heading}}&lt;/span&gt;&lt;/a&gt;
-        &lt;/h4&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;panel-collapse collapse&quot; uib-collapse=&quot;!isOpen&quot;&gt;
-        &lt;div class=&quot;panel-body&quot; style=&quot;text-align: right&quot; ng-transclude&gt;&lt;/div&gt;
-      &lt;/div&gt;
+    &lt;div class=&quot;panel-heading&quot;&gt;
+      &lt;h4 class=&quot;panel-title&quot; style=&quot;color:#fa39c3&quot;&gt;
+        &lt;a href tabindex=&quot;0&quot; class=&quot;accordion-toggle&quot; ng-click=&quot;toggleOpen()&quot; uib-accordion-transclude=&quot;heading&quot;&gt;
+          &lt;span uib-accordion-header ng-class=&quot;{&#x27;text-muted&#x27;: isDisabled}&quot;&gt;
+            {{heading}}
+          &lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-collapse collapse&quot; uib-collapse=&quot;!isOpen&quot;&gt;
+      &lt;div class=&quot;panel-body&quot; style=&quot;text-align: right&quot; ng-transclude&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/script&gt;
 
@@ -402,30 +408,36 @@ Add the ability to override the template used on the component.</p>
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;uib-accordion close-others=&quot;oneAtATime&quot;&gt;
-    &lt;uib-accordion-group heading=&quot;Static Header, initially expanded&quot; is-open=&quot;status.isFirstOpen&quot; is-disabled=&quot;status.isFirstDisabled&quot;&gt;
+    &lt;div uib-accordion-group class=&quot;panel-default&quot; heading=&quot;Static Header, initially expanded&quot; is-open=&quot;status.isFirstOpen&quot; is-disabled=&quot;status.isFirstDisabled&quot;&gt;
       This content is straight in the template.
-    &lt;/uib-accordion-group&gt;
-    &lt;uib-accordion-group heading=&quot;{{group.title}}&quot; ng-repeat=&quot;group in groups&quot;&gt;
+    &lt;/div&gt;
+    &lt;div uib-accordion-group class=&quot;panel-default&quot; heading=&quot;{{group.title}}&quot; ng-repeat=&quot;group in groups&quot;&gt;
       {{group.content}}
-    &lt;/uib-accordion-group&gt;
-    &lt;uib-accordion-group heading=&quot;Dynamic Body Content&quot;&gt;
+    &lt;/div&gt;
+    &lt;div uib-accordion-group class=&quot;panel-default&quot; heading=&quot;Dynamic Body Content&quot;&gt;
       &lt;p&gt;The body of the uib-accordion group grows to fit the contents&lt;/p&gt;
       &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-sm&quot; ng-click=&quot;addItem()&quot;&gt;Add Item&lt;/button&gt;
       &lt;div ng-repeat=&quot;item in items&quot;&gt;{{item}}&lt;/div&gt;
-    &lt;/uib-accordion-group&gt;
-    &lt;uib-accordion-group heading=&quot;Custom template&quot; template-url=&quot;group-template.html&quot;&gt;
+    &lt;/div&gt;
+    &lt;div uib-accordion-group class=&quot;panel-default&quot; heading=&quot;Custom template&quot; template-url=&quot;group-template.html&quot;&gt;
       Hello
-    &lt;/uib-accordion-group&gt;
-    &lt;uib-accordion-group heading=&quot;Delete account&quot; panel-class=&quot;panel-danger&quot;&gt;
+    &lt;/div&gt;
+    &lt;div uib-accordion-group class=&quot;panel-default&quot; is-open=&quot;status.isCustomHeaderOpen&quot; template-url=&quot;group-template.html&quot;&gt;
+      &lt;uib-accordion-heading&gt;
+        Custom template with custom header template &lt;i class=&quot;pull-right glyphicon&quot; ng-class=&quot;{&#x27;glyphicon-chevron-down&#x27;: status.isCustomHeaderOpen, &#x27;glyphicon-chevron-right&#x27;: !status.isCustomHeaderOpen}&quot;&gt;&lt;/i&gt;
+      &lt;/uib-accordion-heading&gt;
+      World
+    &lt;/div&gt;
+    &lt;div uib-accordion-group class=&quot;panel-danger&quot; heading=&quot;Delete account&quot;&gt;
       &lt;p&gt;Please, to delete your account, click the button below&lt;/p&gt;
       &lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;
-    &lt;/uib-accordion-group&gt;
-    &lt;uib-accordion-group is-open=&quot;status.open&quot;&gt;
+    &lt;/div&gt;
+    &lt;div uib-accordion-group class=&quot;panel-default&quot; is-open=&quot;status.open&quot;&gt;
       &lt;uib-accordion-heading&gt;
         I can have markup, too! &lt;i class=&quot;pull-right glyphicon&quot; ng-class=&quot;{&#x27;glyphicon-chevron-down&#x27;: status.open, &#x27;glyphicon-chevron-right&#x27;: !status.open}&quot;&gt;&lt;/i&gt;
       &lt;/uib-accordion-heading&gt;
       This is just some content to illustrate fancy headings.
-    &lt;/uib-accordion-group&gt;
+    &lt;/div&gt;
   &lt;/uib-accordion&gt;
 &lt;/div&gt;
 </code></pre>
@@ -455,6 +467,7 @@ Add the ability to override the template used on the component.</p>
   };
 
   $scope.status = {
+    isCustomHeaderOpen: false,
     isFirstOpen: true,
     isFirstDisabled: false
   };
@@ -487,6 +500,7 @@ Add the ability to override the template used on the component.</p>
   };
 
   $scope.status = {
+    isCustomHeaderOpen: false,
     isFirstOpen: true,
     isFirstDisabled: false
   };
@@ -502,13 +516,11 @@ Add the ability to override the template used on the component.</p>
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="AlertDemoCtrl">
   <script type="text/ng-template" id="alert.html">
-    <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
-      <div ng-transclude></div>
-    </div>
+    <div ng-transclude></div>
   </script>
 
-  <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
-  <uib-alert template-url="alert.html">A happy alert!</uib-alert>
+  <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+  <div uib-alert template-url="alert.html" style="background-color:#fa39c3;color:white">A happy alert!</div>
   <button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>
 </div>
 
@@ -529,10 +541,6 @@ Takes the number of milliseconds that specify the timeout duration, after which 
 <em>(Default: <code>uib/template/alert/alert.html</code>)</em> -
 Add the ability to override the template used in the component.</p>
 </li>
-<li><p><code>type</code>
-<em>(Default: <code>warning</code>)</em> -
-Defines the type of the alert. Go to <a href="http://getbootstrap.com/components/#alerts">bootstrap page</a> to see the type of alerts available.</p>
-</li>
 </ul>
 
                             </div>
@@ -541,20 +549,18 @@ Defines the type of the alert. Go to <a href="http://getbootstrap.com/components
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'alert')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'alert')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;AlertDemoCtrl&quot;&gt;
   &lt;script type=&quot;text/ng-template&quot; id=&quot;alert.html&quot;&gt;
-    &lt;div class=&quot;alert&quot; style=&quot;background-color:#fa39c3;color:white&quot; role=&quot;alert&quot;&gt;
-      &lt;div ng-transclude&gt;&lt;/div&gt;
-    &lt;/div&gt;
+    &lt;div ng-transclude&gt;&lt;/div&gt;
   &lt;/script&gt;
 
-  &lt;uib-alert ng-repeat=&quot;alert in alerts&quot; type=&quot;{{alert.type}}&quot; close=&quot;closeAlert($index)&quot;&gt;{{alert.msg}}&lt;/uib-alert&gt;
-  &lt;uib-alert template-url=&quot;alert.html&quot;&gt;A happy alert!&lt;/uib-alert&gt;
+  &lt;div uib-alert ng-repeat=&quot;alert in alerts&quot; ng-class=&quot;&#x27;alert-&#x27; + (alert.type || &#x27;warning&#x27;)&quot; close=&quot;closeAlert($index)&quot;&gt;{{alert.msg}}&lt;/div&gt;
+  &lt;div uib-alert template-url=&quot;alert.html&quot; style=&quot;background-color:#fa39c3;color:white&quot;&gt;A happy alert!&lt;/div&gt;
   &lt;button type=&quot;button&quot; class=&#x27;btn btn-default&#x27; ng-click=&quot;addAlert()&quot;&gt;Add Alert&lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
@@ -689,6 +695,8 @@ Class to apply to the checked buttons.</p>
 Event used to toggle the buttons.</p>
 </li>
 </ul>
+<h3 id="known-issues">Known issues</h3>
+<p>To use tooltips or popovers on elements within a <code>btn-group</code>, set the tooltip/popover <code>appendToBody</code> option to <code>true</code>. This is due to Bootstrap CSS styling. See <a href="http://getbootstrap.com/components/#btn-groups">here</a> for more information.</p>
 
                             </div>
                         </div>
@@ -696,7 +704,7 @@ Event used to toggle the buttons.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'buttons')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'buttons')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -799,15 +807,15 @@ Event used to toggle the buttons.</p>
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="CarouselDemoCtrl">
   <div style="height: 305px">
-    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
         <img ng-src="{{slide.image}}" style="margin:auto;">
         <div class="carousel-caption">
           <h4>Slide {{slide.id}}</h4>
           <p>{{slide.text}}</p>
         </div>
-      </uib-slide>
-    </uib-carousel>
+      </div>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-6">
@@ -893,22 +901,22 @@ Add the ability to override the template used on the component.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'carousel')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'carousel')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;CarouselDemoCtrl&quot;&gt;
   &lt;div style=&quot;height: 305px&quot;&gt;
-    &lt;uib-carousel active=&quot;active&quot; interval=&quot;myInterval&quot; no-wrap=&quot;noWrapSlides&quot;&gt;
-      &lt;uib-slide ng-repeat=&quot;slide in slides track by slide.id&quot; index=&quot;slide.id&quot;&gt;
+    &lt;div uib-carousel active=&quot;active&quot; interval=&quot;myInterval&quot; no-wrap=&quot;noWrapSlides&quot;&gt;
+      &lt;div uib-slide ng-repeat=&quot;slide in slides track by slide.id&quot; index=&quot;slide.id&quot;&gt;
         &lt;img ng-src=&quot;{{slide.image}}&quot; style=&quot;margin:auto;&quot;&gt;
         &lt;div class=&quot;carousel-caption&quot;&gt;
           &lt;h4&gt;Slide {{slide.id}}&lt;/h4&gt;
           &lt;p&gt;{{slide.text}}&lt;/p&gt;
         &lt;/div&gt;
-      &lt;/uib-slide&gt;
-    &lt;/uib-carousel&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-md-6&quot;&gt;
@@ -1064,9 +1072,15 @@ Add the ability to override the template used on the component.</p>
                           <div class="row">
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="CollapseDemoCtrl">
-	<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+	<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse Vertically</button>
 	<hr>
 	<div uib-collapse="isCollapsed">
+		<div class="well well-lg">Some content</div>
+	</div>
+
+	<button type="button" class="btn btn-default" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal">Toggle collapse Horizontally</button>
+	<hr>
+	<div uib-collapse="isCollapsedHorizontal" horizontal>
 		<div class="well well-lg">Some content</div>
 	</div>
 </div>
@@ -1102,6 +1116,10 @@ If the returned promise is rejected, expanding will be cancelled.</p>
 <em>(Default: <code>false</code>)</em> -
 Whether the element should be collapsed or not.</p>
 </li>
+<li><p><code>horizontal</code>
+<small class="badge">$</small> -
+An optional attribute that permit to collapse horizontally.</p>
+</li>
 </ul>
 
                             </div>
@@ -1110,15 +1128,21 @@ Whether the element should be collapsed or not.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'collapse')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'collapse')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;CollapseDemoCtrl&quot;&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; ng-click=&quot;isCollapsed = !isCollapsed&quot;&gt;Toggle collapse&lt;/button&gt;
+	&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; ng-click=&quot;isCollapsed = !isCollapsed&quot;&gt;Toggle collapse Vertically&lt;/button&gt;
 	&lt;hr&gt;
 	&lt;div uib-collapse=&quot;isCollapsed&quot;&gt;
+		&lt;div class=&quot;well well-lg&quot;&gt;Some content&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; ng-click=&quot;isCollapsedHorizontal = !isCollapsedHorizontal&quot;&gt;Toggle collapse Horizontally&lt;/button&gt;
+	&lt;hr&gt;
+	&lt;div uib-collapse=&quot;isCollapsedHorizontal&quot; horizontal&gt;
 		&lt;div class=&quot;well well-lg&quot;&gt;Some content&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
@@ -1129,6 +1153,7 @@ Whether the element should be collapsed or not.</p>
                                         <div plunker-content="javascript">
                                             <pre ng-non-bindable><code data-language="javascript">angular.module(&#x27;ui.bootstrap.demo&#x27;).controller(&#x27;CollapseDemoCtrl&#x27;, function ($scope) {
   $scope.isCollapsed = false;
+  $scope.isCollapsedHorizontal = false;
 });
 </code></pre>
                                         </div>
@@ -1139,6 +1164,7 @@ Whether the element should be collapsed or not.</p>
                     </section>
                     <script>angular.module('ui.bootstrap.demo').controller('CollapseDemoCtrl', function ($scope) {
   $scope.isCollapsed = false;
+  $scope.isCollapsedHorizontal = false;
 });
 </script>
                 
@@ -1311,7 +1337,7 @@ Parses the long form of the era (<code>Anno Domini</code> or <code>Before Christ
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'dateparser')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'dateparser')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -1374,33 +1400,7 @@ Parses the long form of the era (<code>Anno Domini</code> or <code>Before Christ
 
     <h4>Inline</h4>
     <div style="display:inline-block; min-height:290px;">
-      <uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="inlineOptions"></uib-datepicker>
-    </div>
-
-    <h4>Popup</h4>
-    <div class="row">
-      <div class="col-md-6">
-        <p class="input-group">
-          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-          <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
-          </span>
-        </p>
-      </div>
-
-      <div class="col-md-6">
-        <p class="input-group">
-          <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-          <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
-          </span>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
-      </div>
+      <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
     </div>
 
     <hr />
@@ -1414,7 +1414,6 @@ Parses the long form of the era (<code>Anno Domini</code> or <code>Before Christ
                             <div class="col-md-6">
                                 <p>Our datepicker is flexible and fully customizable.</p>
 <p>You can navigate through days, months and years.</p>
-<p>It comes in two formats, an inline <code>uib-datepicker</code> and an <code>uib-datepicker-popup</code> to be embedded in an input.</p>
 <p>The datepicker has 3 modes:</p>
 <ul>
 <li><code>day</code> - In this mode you&#39;re presented with a 6-week calendar for a specified month.</li>
@@ -1426,7 +1425,7 @@ Parses the long form of the era (<code>Anno Domini</code> or <code>Before Christ
 <li><p><code>ng-model</code>
 <small class="badge">$</small>
 <i class="glyphicon glyphicon-eye-open"></i> -
-The date object. Needs to be a Javascript Date object.</p>
+The date object. Must be a Javascript <code>Date</code> object. You may use the <code>uibDateParser</code> service to assist in string-to-object conversion.</p>
 </li>
 <li><p><code>ng-model-options</code>
 <small class="badge">$</small>
@@ -1449,11 +1448,11 @@ Add the ability to override the template used on the component.</p>
 <small class="badge">$</small> -
 An object to configure the datepicker in one place.</p>
 <ul>
-<li><p><code>customClass (date, mode)</code> -
-An optional expression to add classes based on passing a date and current mode.</p>
+<li><p><code>customClass ({date: date, mode: mode})</code> -
+An optional expression to add classes based on passing an object with date and current mode properties.</p>
 </li>
-<li><p><code>dateDisabled (date, mode)</code> -
-An optional expression to disable visible options based on passing a date and current mode.</p>
+<li><p><code>dateDisabled ({date: date, mode: mode})</code> -
+An optional expression to disable visible options based on passing an object with date and current mode properties.</p>
 </li>
 <li><p><code>datepickerMode</code>
 <small class="badge">C</small>
@@ -1500,7 +1499,7 @@ The initial date view when no model value is specified.</p>
 <small class="badge">C</small>
 <i class="glyphicon glyphicon-eye-open"></i>
 <em>(Default: <code>null</code>)</em> -
-Defines the maximum available date.</p>
+Defines the maximum available date. Requires a Javascript Date object.</p>
 </li>
 <li><p><code>maxMode</code>
 <small class="badge">C</small>
@@ -1512,13 +1511,23 @@ Sets an upper limit for mode.</p>
 <small class="badge">C</small>
 <i class="glyphicon glyphicon-eye-open"></i>
 <em>(Default: <code>null</code>)</em> -
-Defines the minimum available date.</p>
+Defines the minimum available date. Requires a Javascript Date object.</p>
 </li>
 <li><p><code>minMode</code>
 <small class="badge">C</small>
 <i class="glyphicon glyphicon-eye-open"></i>
 <em>(Default: <code>day</code>)</em> -
 Sets a lower limit for mode.</p>
+</li>
+<li><p><code>monthColumns</code>
+<small class="badge">C</small>
+<em>(Default: <code>3</code>)</em> -
+Number of columns displayed in month selection.</p>
+</li>
+<li><p><code>ngModelOptions</code>
+<small class="badge">C</small>
+<em>(Default: <code>null</code>)</em> -
+Sets <code>ngModelOptions</code> for datepicker. This can be overridden through attribute usage</p>
 </li>
 <li><p><code>shortcutPropagation</code>
 <small class="badge">C</small>
@@ -1548,8 +1557,269 @@ Number of columns displayed in year selection.</p>
 </ul>
 </li>
 </ul>
+<h3 id="keyboard-support">Keyboard support</h3>
+<p>Depending on datepicker&#39;s current mode, the date may refer either to day, month or year. Accordingly, the term view refers either to a month, year or year range.</p>
+<ul>
+<li><code>Left</code>: Move focus to the previous date. Will move to the last date of the previous view, if the current date is the first date of a view.</li>
+<li><code>Right</code>: Move focus to the next date. Will move to the first date of the following view, if the current date is the last date of a view.</li>
+<li><code>Up</code>: Move focus to the same column of the previous row. Will wrap to the appropriate row in the previous view.</li>
+<li><code>Down</code>: Move focus to the same column of the following row. Will wrap to the appropriate row in the following view.</li>
+<li><code>PgUp</code>: Move focus to the same date of the previous view. If that date does not exist, focus is placed on the last date of the month.</li>
+<li><code>PgDn</code>: Move focus to the same date of the following view. If that date does not exist, focus is placed on the last date of the month.</li>
+<li><code>Home</code>: Move to the first date of the view.</li>
+<li><code>End</code>: Move to the last date of the view.</li>
+<li><code>Enter</code>/<code>Space</code>: Select date.</li>
+<li><code>Ctrl</code>+<code>Up</code>: Move to an upper mode.</li>
+<li><code>Ctrl</code>+<code>Down</code>: Move to a lower mode.</li>
+<li><code>Esc</code>: Will close popup, and move focus to the input.</li>
+</ul>
+<p><strong>Notes</strong></p>
+<p>If the date a user enters falls outside of the min-/max-date range, a <code>dateDisabled</code> validation error will show on the form.</p>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row code">
+                            <div class="col-md-12" ng-controller="PlunkerCtrl">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'datepicker')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                </div>
+                                <uib-tabset active="activeTab">
+                                    <uib-tab index="0" heading="Markup">
+                                        <div plunker-content="markup">
+                                            <pre ng-non-bindable><code data-language="html">&lt;style&gt;
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+&lt;/style&gt;
+&lt;div ng-controller=&quot;DatepickerDemoCtrl&quot;&gt;
+    &lt;pre&gt;Selected date is: &lt;em&gt;{{dt | date:&#x27;fullDate&#x27; }}&lt;/em&gt;&lt;/pre&gt;
+
+    &lt;h4&gt;Inline&lt;/h4&gt;
+    &lt;div style=&quot;display:inline-block; min-height:290px;&quot;&gt;
+      &lt;div uib-datepicker ng-model=&quot;dt&quot; class=&quot;well well-sm&quot; datepicker-options=&quot;options&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr /&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-info&quot; ng-click=&quot;today()&quot;&gt;Today&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-default&quot; ng-click=&quot;setDate(2009, 7, 24)&quot;&gt;2009-08-24&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-danger&quot; ng-click=&quot;clear()&quot;&gt;Clear&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-default&quot; ng-click=&quot;toggleMin()&quot; uib-tooltip=&quot;After today restriction&quot;&gt;Min date&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                                        </div>
+                                    </uib-tab>
+                                    <uib-tab index="1" heading="JavaScript">
+                                        <div plunker-content="javascript">
+                                            <pre ng-non-bindable><code data-language="javascript">angular.module(&#x27;ui.bootstrap.demo&#x27;).controller(&#x27;DatepickerDemoCtrl&#x27;, function ($scope) {
+  $scope.today = function() {
+    $scope.dt = new Date();
+  };
+  $scope.today();
+
+  $scope.clear = function() {
+    $scope.dt = null;
+  };
+
+  $scope.options = {
+    customClass: getDayClass,
+    minDate: new Date(),
+    showWeeks: true
+  };
+
+  // Disable weekend selection
+  function disabled(data) {
+    var date = data.date,
+      mode = data.mode;
+    return mode === &#x27;day&#x27; &amp;&amp; (date.getDay() === 0 || date.getDay() === 6);
+  }
+
+  $scope.toggleMin = function() {
+    $scope.options.minDate = $scope.options.minDate ? null : new Date();
+  };
+
+  $scope.toggleMin();
+
+  $scope.setDate = function(year, month, day) {
+    $scope.dt = new Date(year, month, day);
+  };
+
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  var afterTomorrow = new Date(tomorrow);
+  afterTomorrow.setDate(tomorrow.getDate() + 1);
+  $scope.events = [
+    {
+      date: tomorrow,
+      status: &#x27;full&#x27;
+    },
+    {
+      date: afterTomorrow,
+      status: &#x27;partially&#x27;
+    }
+  ];
+
+  function getDayClass(data) {
+    var date = data.date,
+      mode = data.mode;
+    if (mode === &#x27;day&#x27;) {
+      var dayToCheck = new Date(date).setHours(0,0,0,0);
+
+      for (var i = 0; i &lt; $scope.events.length; i++) {
+        var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
+
+        if (dayToCheck === currentDay) {
+          return $scope.events[i].status;
+        }
+      }
+    }
+
+    return &#x27;&#x27;;
+  }
+});
+</code></pre>
+                                        </div>
+                                    </uib-tab>
+                                </uib-tabset>
+                            </div>
+                        </div>
+                    </section>
+                    <script>angular.module('ui.bootstrap.demo').controller('DatepickerDemoCtrl', function ($scope) {
+  $scope.today = function() {
+    $scope.dt = new Date();
+  };
+  $scope.today();
+
+  $scope.clear = function() {
+    $scope.dt = null;
+  };
+
+  $scope.options = {
+    customClass: getDayClass,
+    minDate: new Date(),
+    showWeeks: true
+  };
+
+  // Disable weekend selection
+  function disabled(data) {
+    var date = data.date,
+      mode = data.mode;
+    return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+  }
+
+  $scope.toggleMin = function() {
+    $scope.options.minDate = $scope.options.minDate ? null : new Date();
+  };
+
+  $scope.toggleMin();
+
+  $scope.setDate = function(year, month, day) {
+    $scope.dt = new Date(year, month, day);
+  };
+
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  var afterTomorrow = new Date(tomorrow);
+  afterTomorrow.setDate(tomorrow.getDate() + 1);
+  $scope.events = [
+    {
+      date: tomorrow,
+      status: 'full'
+    },
+    {
+      date: afterTomorrow,
+      status: 'partially'
+    }
+  ];
+
+  function getDayClass(data) {
+    var date = data.date,
+      mode = data.mode;
+    if (mode === 'day') {
+      var dayToCheck = new Date(date).setHours(0,0,0,0);
+
+      for (var i = 0; i < $scope.events.length; i++) {
+        var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
+
+        if (dayToCheck === currentDay) {
+          return $scope.events[i].status;
+        }
+      }
+    }
+
+    return '';
+  }
+});
+</script>
+                
+                    <section id="datepickerPopup">
+                        <div class="page-header">
+                          <h1>Datepicker Popup<small>
+                              (<a target="_blank" href="https://github.com/angular-ui/bootstrap/tree/master/src/datepickerPopup">ui.bootstrap.datepickerPopup</a>)
+                          </small></h1>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 show-grid">
+                                <style>
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+</style>
+<div ng-controller="DatepickerPopupDemoCtrl">
+    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+    <h4>Popup</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+      </div>
+    </div>
+
+    <hr />
+    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+</div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <p>The datepicker popup is meant to be used with an input element. To understand usage of the datepicker, please refer to its documentation <a href="https://angular-ui.github.io/bootstrap/#/datepicker">here</a>.</p>
 <h3 id="uib-datepicker-popup-settings">uib-datepicker-popup settings</h3>
-<p>The popup is a wrapper that you can use in an input to toggle a datepicker. To configure the datepicker, use <code>datepicker-options</code>.</p>
+<p>The popup is a wrapper that you can use in an input to toggle a datepicker. To configure the datepicker, use <code>datepicker-options</code> as documented in the <a href="https://angular-ui.github.io/bootstrap/#/datepicker">inline datepicker</a>.</p>
 <ul>
 <li><p><code>alt-input-formats</code>
 <small class="badge">$</small>
@@ -1590,7 +1860,7 @@ An object with any combination of the datepicker settings (in camelCase) used to
 </li>
 <li><p><code>datepicker-popup-template-url</code>
 <small class="badge">C</small>
-<em>(Default: <code>uib/template/datepicker/popup.html</code>)</em> -
+<em>(Default: <code>uib/template/datepickerPopup/popup.html</code>)</em> -
 Add the ability to override the template used on the component.</p>
 </li>
 <li><p><code>datepicker-template-url</code>
@@ -1603,6 +1873,11 @@ Add the ability to override the template used on the component (inner uib-datepi
 <i class="glyphicon glyphicon-eye-open"></i>
 <em>(Default: <code>false</code>)</em> -
 Whether or not to show the datepicker.</p>
+</li>
+<li><p><code>ng-model</code>
+<small class="badge">$</small>
+<i class="glyphicon glyphicon-eye-open"></i> -
+The date object. Must be a Javascript <code>Date</code> object. You may use the <code>uibDateParser</code> service to assist in string-to-object conversion.</p>
 </li>
 <li><p><code>on-open-focus</code>
 <small class="badge">$</small>
@@ -1622,8 +1897,8 @@ Whether or not to display a button bar underneath the uib-datepicker.</p>
 You can override the input type to be <em>(date|datetime-local|month)</em>. That will change the date format of the popup.</p>
 </li>
 <li><p><code>popup-placement</code>
- <small class="badge">C</small>
- <em>(Default: <code>auto bottom-left</code>, Config: &#39;placement&#39;)</em> -
+<small class="badge">C</small>
+<em>(Default: <code>auto bottom-left</code>, Config: &#39;placement&#39;)</em> -
 Passing in &#39;auto&#39; separated by a space before the placement will enable auto positioning, e.g: &quot;auto bottom-left&quot;. The popup will attempt to position where it fits in the closest scrollable ancestor. Accepts:</p>
 <ul>
 <li><code>top</code> - popup on top, horizontally centered on input element.</li>
@@ -1646,24 +1921,7 @@ Passing in &#39;auto&#39; separated by a space before the placement will enable 
 The format for displayed dates. This string can take string literals by surrounding the value with single quotes, i.e. <code>yyyy-MM-dd h &#39;o\&#39;clock&#39;</code>.</p>
 </li>
 </ul>
-<h3 id="keyboard-support">Keyboard support</h3>
-<p>Depending on datepicker&#39;s current mode, the date may refer either to day, month or year. Accordingly, the term view refers either to a month, year or year range.</p>
-<ul>
-<li><code>Left</code>: Move focus to the previous date. Will move to the last date of the previous view, if the current date is the first date of a view.</li>
-<li><code>Right</code>: Move focus to the next date. Will move to the first date of the following view, if the current date is the last date of a view.</li>
-<li><code>Up</code>: Move focus to the same column of the previous row. Will wrap to the appropriate row in the previous view.</li>
-<li><code>Down</code>: Move focus to the same column of the following row. Will wrap to the appropriate row in the following view.</li>
-<li><code>PgUp</code>: Move focus to the same date of the previous view. If that date does not exist, focus is placed on the last date of the month.</li>
-<li><code>PgDn</code>: Move focus to the same date of the following view. If that date does not exist, focus is placed on the last date of the month.</li>
-<li><code>Home</code>: Move to the first date of the view.</li>
-<li><code>End</code>: Move to the last date of the view.</li>
-<li><code>Enter</code>/<code>Space</code>: Select date.</li>
-<li><code>Ctrl</code>+<code>Up</code>: Move to an upper mode.</li>
-<li><code>Ctrl</code>+<code>Down</code>: Move to a lower mode.</li>
-<li><code>Esc</code>: Will close popup, and move focus to the input.</li>
-</ul>
 <p><strong>Notes</strong></p>
-<p>If the date a user enters falls outside of the min-/max-date range, a <code>dateDisabled</code> validation error will show on the form.</p>
 <p>If using this directive on input type date, a native browser datepicker could also appear.</p>
 
                             </div>
@@ -1672,7 +1930,7 @@ The format for displayed dates. This string can take string literals by surround
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'datepicker')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'datepickerPopup')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -1689,13 +1947,8 @@ The format for displayed dates. This string can take string literals by surround
     color: black;
   }
 &lt;/style&gt;
-&lt;div ng-controller=&quot;DatepickerDemoCtrl&quot;&gt;
+&lt;div ng-controller=&quot;DatepickerPopupDemoCtrl&quot;&gt;
     &lt;pre&gt;Selected date is: &lt;em&gt;{{dt | date:&#x27;fullDate&#x27; }}&lt;/em&gt;&lt;/pre&gt;
-
-    &lt;h4&gt;Inline&lt;/h4&gt;
-    &lt;div style=&quot;display:inline-block; min-height:290px;&quot;&gt;
-      &lt;uib-datepicker ng-model=&quot;dt&quot; class=&quot;well well-sm&quot; datepicker-options=&quot;inlineOptions&quot;&gt;&lt;/uib-datepicker&gt;
-    &lt;/div&gt;
 
     &lt;h4&gt;Popup&lt;/h4&gt;
     &lt;div class=&quot;row&quot;&gt;
@@ -1734,7 +1987,7 @@ The format for displayed dates. This string can take string literals by surround
                                     </uib-tab>
                                     <uib-tab index="1" heading="JavaScript">
                                         <div plunker-content="javascript">
-                                            <pre ng-non-bindable><code data-language="javascript">angular.module(&#x27;ui.bootstrap.demo&#x27;).controller(&#x27;DatepickerDemoCtrl&#x27;, function ($scope) {
+                                            <pre ng-non-bindable><code data-language="javascript">angular.module(&#x27;ui.bootstrap.demo&#x27;).controller(&#x27;DatepickerPopupDemoCtrl&#x27;, function ($scope) {
   $scope.today = function() {
     $scope.dt = new Date();
   };
@@ -1836,7 +2089,7 @@ The format for displayed dates. This string can take string literals by surround
                             </div>
                         </div>
                     </section>
-                    <script>angular.module('ui.bootstrap.demo').controller('DatepickerDemoCtrl', function ($scope) {
+                    <script>angular.module('ui.bootstrap.demo').controller('DatepickerPopupDemoCtrl', function ($scope) {
   $scope.today = function() {
     $scope.dt = new Date();
   };
@@ -1948,7 +2201,7 @@ The format for displayed dates. This string can take string literals by surround
       <a href id="simple-dropdown" uib-dropdown-toggle>
         Click me for a dropdown, yo!
       </a>
-      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
         <li ng-repeat="choice in items">
           <a href>{{choice}}</a>
         </li>
@@ -1960,7 +2213,7 @@ The format for displayed dates. This string can take string literals by surround
       <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
         Button dropdown <span class="caret"></span>
       </button>
-      <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
         <li role="menuitem"><a href="#">Action</a></li>
         <li role="menuitem"><a href="#">Another action</a></li>
         <li role="menuitem"><a href="#">Something else here</a></li>
@@ -1976,7 +2229,7 @@ The format for displayed dates. This string can take string literals by surround
         <span class="caret"></span>
         <span class="sr-only">Split button!</span>
       </button>
-      <ul uib-dropdown-menu role="menu" aria-labelledby="split-button">
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
         <li role="menuitem"><a href="#">Action</a></li>
         <li role="menuitem"><a href="#">Another action</a></li>
         <li role="menuitem"><a href="#">Something else here</a></li>
@@ -1990,7 +2243,7 @@ The format for displayed dates. This string can take string literals by surround
       <button id="btn-append-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
         Dropdown on Body <span class="caret"></span>
       </button>
-      <ul uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
         <li role="menuitem"><a href="#">Action</a></li>
         <li role="menuitem"><a href="#">Another action</a></li>
         <li role="menuitem"><a href="#">Something else here</a></li>
@@ -2004,7 +2257,7 @@ The format for displayed dates. This string can take string literals by surround
       <button id="button-template-url" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
         Dropdown using template <span class="caret"></span>
       </button>
-      <ul uib-dropdown-menu template-url="dropdown.html" aria-labelledby="button-template-url">
+      <ul class="dropdown-menu" uib-dropdown-menu template-url="dropdown.html" aria-labelledby="button-template-url">
       </ul>
     </div>
 
@@ -2020,7 +2273,7 @@ The format for displayed dates. This string can take string literals by surround
         <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>
             Dropdown with keyboard navigation <span class="caret"></span>
         </button>
-        <ul uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
             <li role="menuitem"><a href="#">Action</a></li>
             <li role="menuitem"><a href="#">Another action</a></li>
             <li role="menuitem"><a href="#">Something else here</a></li>
@@ -2103,7 +2356,7 @@ The format for displayed dates. This string can take string literals by surround
 Controls the behavior of the menu when clicked.</p>
 <ul>
 <li><code>always</code> - Automatically closes the dropdown when any of its elements is clicked.</li>
-<li><code>disabled</code> - Disables the auto close. You can control it manually with <code>is-open</code>. It still gets closed if the toggle is clicked, <code>esc</code> is pressed or another dropdown is open. It also won&#39;t be closed on <code>$locationchangeSuccess</code>.</li>
+<li><code>disabled</code> - Disables the auto close. You can control it manually with <code>is-open</code>. It still gets closed if the toggle is clicked, <code>esc</code> is pressed or another dropdown is open.</li>
 <li><code>outsideClick</code> - Closes the dropdown automatically only when the user clicks any element outside the dropdown.</li>
 </ul>
 </li>
@@ -2159,7 +2412,7 @@ Class to apply when the dropdown is open.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'dropdown')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'dropdown')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -2171,7 +2424,7 @@ Class to apply when the dropdown is open.</p>
       &lt;a href id=&quot;simple-dropdown&quot; uib-dropdown-toggle&gt;
         Click me for a dropdown, yo!
       &lt;/a&gt;
-      &lt;ul uib-dropdown-menu aria-labelledby=&quot;simple-dropdown&quot;&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; uib-dropdown-menu aria-labelledby=&quot;simple-dropdown&quot;&gt;
         &lt;li ng-repeat=&quot;choice in items&quot;&gt;
           &lt;a href&gt;{{choice}}&lt;/a&gt;
         &lt;/li&gt;
@@ -2183,7 +2436,7 @@ Class to apply when the dropdown is open.</p>
       &lt;button id=&quot;single-button&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; uib-dropdown-toggle ng-disabled=&quot;disabled&quot;&gt;
         Button dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
-      &lt;ul uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;single-button&quot;&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;single-button&quot;&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
@@ -2199,7 +2452,7 @@ Class to apply when the dropdown is open.</p>
         &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;span class=&quot;sr-only&quot;&gt;Split button!&lt;/span&gt;
       &lt;/button&gt;
-      &lt;ul uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;split-button&quot;&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;split-button&quot;&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
@@ -2213,7 +2466,7 @@ Class to apply when the dropdown is open.</p>
       &lt;button id=&quot;btn-append-to-body&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; uib-dropdown-toggle&gt;
         Dropdown on Body &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
-      &lt;ul uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;btn-append-to-body&quot;&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;btn-append-to-body&quot;&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
         &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
@@ -2227,7 +2480,7 @@ Class to apply when the dropdown is open.</p>
       &lt;button id=&quot;button-template-url&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; uib-dropdown-toggle ng-disabled=&quot;disabled&quot;&gt;
         Dropdown using template &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
-      &lt;ul uib-dropdown-menu template-url=&quot;dropdown.html&quot; aria-labelledby=&quot;button-template-url&quot;&gt;
+      &lt;ul class=&quot;dropdown-menu&quot; uib-dropdown-menu template-url=&quot;dropdown.html&quot; aria-labelledby=&quot;button-template-url&quot;&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
 
@@ -2243,7 +2496,7 @@ Class to apply when the dropdown is open.</p>
         &lt;button id=&quot;simple-btn-keyboard-nav&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot; uib-dropdown-toggle&gt;
             Dropdown with keyboard navigation &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
         &lt;/button&gt;
-        &lt;ul uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;simple-btn-keyboard-nav&quot;&gt;
+        &lt;ul class=&quot;dropdown-menu&quot; uib-dropdown-menu role=&quot;menu&quot; aria-labelledby=&quot;simple-btn-keyboard-nav&quot;&gt;
             &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
             &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
             &lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
@@ -2534,6 +2787,7 @@ Also, the <code>$close</code> and <code>$dismiss</code> methods returns true if 
 </ul>
 <h5 id="ui-router-resolves">UI Router resolves</h5>
 <p>If one wants to have the modal resolve using <a href="https://github.com/angular-ui/ui-router">UI Router&#39;s</a> pre-1.0 resolve mechanism, one can call <code>$uibResolve.setResolver(&#39;$resolve&#39;)</code> in the configuration phase of the application. One can also provide a custom resolver as well, as long as the signature conforms to UI Router&#39;s <a href="http://angular-ui.github.io/ui-router/site/#/api/ui.router.util.$resolve">$resolve</a>.</p>
+<p>When the modal is opened with a controller, a <code>$resolve</code> object is exposed on the template with the resolved values from the resolve object.</p>
 
                             </div>
                         </div>
@@ -2541,7 +2795,7 @@ Also, the <code>$close</code> and <code>$dismiss</code> methods returns true if 
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'modal')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'modal')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -2697,7 +2951,7 @@ angular.module('ui.bootstrap.demo').controller('ModalInstanceCtrl', function ($s
                                 <div ng-controller="PagerDemoCtrl">
   <h4>Pager</h4>
   <pre>You are currently on page {{currentPage}}</pre>
-  <uib-pager total-items="totalItems" ng-model="currentPage"></uib-pager>
+  <ul uib-pager total-items="totalItems" ng-model="currentPage"></ul>
 </div>
 
                             </div>
@@ -2761,7 +3015,7 @@ Total number of items in all pages.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'pager')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'pager')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -2769,7 +3023,7 @@ Total number of items in all pages.</p>
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;PagerDemoCtrl&quot;&gt;
   &lt;h4&gt;Pager&lt;/h4&gt;
   &lt;pre&gt;You are currently on page {{currentPage}}&lt;/pre&gt;
-  &lt;uib-pager total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot;&gt;&lt;/uib-pager&gt;
+  &lt;ul uib-pager total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot;&gt;&lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
                                         </div>
@@ -2803,25 +3057,25 @@ Total number of items in all pages.</p>
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="PaginationDemoCtrl">
     <h4>Default</h4>
-    <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
-    <uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
-    <uib-pagination direction-links="false" boundary-links="true" total-items="totalItems" ng-model="currentPage"></uib-pagination>
-    <uib-pagination direction-links="false" total-items="totalItems" ng-model="currentPage" num-pages="smallnumPages"></uib-pagination>
+    <ul uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></ul>
+    <ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+    <ul uib-pagination direction-links="false" boundary-links="true" total-items="totalItems" ng-model="currentPage"></ul>
+    <ul uib-pagination direction-links="false" total-items="totalItems" ng-model="currentPage" num-pages="smallnumPages"></ul>
     <pre>The selected page no: {{currentPage}}</pre>
     <button type="button" class="btn btn-info" ng-click="setPage(3)">Set current page to: 3</button>
 
     <hr />
     <h4>Limit the maximum visible buttons</h4>
     <h6><code>rotate</code> defaulted to <code>true</code>:</h6>
-    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></uib-pagination>
+    <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></ul>
     <h6><code>rotate</code> defaulted to <code>true</code> and <code>force-ellipses</code> set to <code>true</code>:</h6>
-    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></uib-pagination>
+    <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>
     <h6><code>rotate</code> set to <code>false</code>:</h6>
-    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false"></uib-pagination>
+    <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false"></ul>
     <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code>:</h6>
-    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"></uib-pagination>
+    <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true"></ul>
     <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> set to <code>false</code>:</h6>
-    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></uib-pagination>
+    <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
     <pre>Page: {{bigCurrentPage}} / {{numPages}}</pre>
 
 </div>
@@ -2935,32 +3189,32 @@ Total number of items in all pages.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'pagination')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'pagination')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;PaginationDemoCtrl&quot;&gt;
     &lt;h4&gt;Default&lt;/h4&gt;
-    &lt;uib-pagination total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot; ng-change=&quot;pageChanged()&quot;&gt;&lt;/uib-pagination&gt;
-    &lt;uib-pagination boundary-links=&quot;true&quot; total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot; class=&quot;pagination-sm&quot; previous-text=&quot;&amp;lsaquo;&quot; next-text=&quot;&amp;rsaquo;&quot; first-text=&quot;&amp;laquo;&quot; last-text=&quot;&amp;raquo;&quot;&gt;&lt;/uib-pagination&gt;
-    &lt;uib-pagination direction-links=&quot;false&quot; boundary-links=&quot;true&quot; total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot;&gt;&lt;/uib-pagination&gt;
-    &lt;uib-pagination direction-links=&quot;false&quot; total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot; num-pages=&quot;smallnumPages&quot;&gt;&lt;/uib-pagination&gt;
+    &lt;ul uib-pagination total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot; ng-change=&quot;pageChanged()&quot;&gt;&lt;/ul&gt;
+    &lt;ul uib-pagination boundary-links=&quot;true&quot; total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot; class=&quot;pagination-sm&quot; previous-text=&quot;&amp;lsaquo;&quot; next-text=&quot;&amp;rsaquo;&quot; first-text=&quot;&amp;laquo;&quot; last-text=&quot;&amp;raquo;&quot;&gt;&lt;/ul&gt;
+    &lt;ul uib-pagination direction-links=&quot;false&quot; boundary-links=&quot;true&quot; total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot;&gt;&lt;/ul&gt;
+    &lt;ul uib-pagination direction-links=&quot;false&quot; total-items=&quot;totalItems&quot; ng-model=&quot;currentPage&quot; num-pages=&quot;smallnumPages&quot;&gt;&lt;/ul&gt;
     &lt;pre&gt;The selected page no: {{currentPage}}&lt;/pre&gt;
     &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot; ng-click=&quot;setPage(3)&quot;&gt;Set current page to: 3&lt;/button&gt;
 
     &lt;hr /&gt;
     &lt;h4&gt;Limit the maximum visible buttons&lt;/h4&gt;
     &lt;h6&gt;&lt;code&gt;rotate&lt;/code&gt; defaulted to &lt;code&gt;true&lt;/code&gt;:&lt;/h6&gt;
-    &lt;uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-links=&quot;true&quot; num-pages=&quot;numPages&quot;&gt;&lt;/uib-pagination&gt;
+    &lt;ul uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-links=&quot;true&quot; num-pages=&quot;numPages&quot;&gt;&lt;/ul&gt;
     &lt;h6&gt;&lt;code&gt;rotate&lt;/code&gt; defaulted to &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;force-ellipses&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;:&lt;/h6&gt;
-    &lt;uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-links=&quot;true&quot; force-ellipses=&quot;true&quot;&gt;&lt;/uib-pagination&gt;
+    &lt;ul uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-links=&quot;true&quot; force-ellipses=&quot;true&quot;&gt;&lt;/ul&gt;
     &lt;h6&gt;&lt;code&gt;rotate&lt;/code&gt; set to &lt;code&gt;false&lt;/code&gt;:&lt;/h6&gt;
-    &lt;uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-links=&quot;true&quot; rotate=&quot;false&quot;&gt;&lt;/uib-pagination&gt;
+    &lt;ul uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-links=&quot;true&quot; rotate=&quot;false&quot;&gt;&lt;/ul&gt;
     &lt;h6&gt;&lt;code&gt;boundary-link-numbers&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;rotate&lt;/code&gt; defaulted to &lt;code&gt;true&lt;/code&gt;:&lt;/h6&gt;
-    &lt;uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-link-numbers=&quot;true&quot;&gt;&lt;/uib-pagination&gt;
+    &lt;ul uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-link-numbers=&quot;true&quot;&gt;&lt;/ul&gt;
     &lt;h6&gt;&lt;code&gt;boundary-link-numbers&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;rotate&lt;/code&gt; set to &lt;code&gt;false&lt;/code&gt;:&lt;/h6&gt;
-    &lt;uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-link-numbers=&quot;true&quot; rotate=&quot;false&quot;&gt;&lt;/uib-pagination&gt;
+    &lt;ul uib-pagination total-items=&quot;bigTotalItems&quot; ng-model=&quot;bigCurrentPage&quot; max-size=&quot;maxSize&quot; class=&quot;pagination-sm&quot; boundary-link-numbers=&quot;true&quot; rotate=&quot;false&quot;&gt;&lt;/ul&gt;
     &lt;pre&gt;Page: {{bigCurrentPage}} / {{numPages}}&lt;/pre&gt;
 
 &lt;/div&gt;
@@ -3054,9 +3308,9 @@ Total number of items in all pages.</p>
     <hr />
     <h4>Triggers</h4>
     <p>
-      <button uib-popover="I appeared on mouse enter!" popover-trigger="mouseenter" type="button" class="btn btn-default">Mouseenter</button>
+      <button uib-popover="I appeared on mouse enter!" popover-trigger="'mouseenter'" type="button" class="btn btn-default">Mouseenter</button>
     </p>
-    <input type="text" value="Click me!" uib-popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="focus" class="form-control">
+    <input type="text" value="Click me!" uib-popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="'focus'" class="form-control">
 
     <hr />
     <h4>Other</h4>
@@ -3064,6 +3318,7 @@ Total number of items in all pages.</p>
     <button uib-popover="I have a title!" popover-title="The title." type="button" class="btn btn-default">title</button>
     <button uib-popover="I am activated manually" popover-is-open="popoverIsOpen" ng-click="popoverIsOpen = !popoverIsOpen" type="button" class="btn btn-default">Toggle popover</button>
     <button uib-popover-html="htmlPopover" class="btn btn-default">HTML Popover</button>
+    <button uib-popover-html="'<b>HTML</b>, <i>inline</i>'" class="btn btn-default">HTML Popover (inline)</button>
 </div>
 
                             </div>
@@ -3143,8 +3398,9 @@ Popup delay in milliseconds until it opens.</p>
  A string to display as a fancy title.</p>
 </li>
 <li><p><code>popover-trigger</code>
-<em>(Default: <code>click</code>)</em> -
-What should trigger a show of the popover? Supports a space separated list of event names (see below).</p>
+<small class="badge">$</small>
+<em>(Default: <code>&#39;click&#39;</code>)</em> -
+What should trigger a show of the popover? Supports a space separated list of event names, or objects (see below).</p>
 </li>
 </ul>
 <p><strong>Note:</strong> To configure the tooltips, you need to do it on <code>$uibTooltipProvider</code> (also see below).</p>
@@ -3186,7 +3442,7 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'popover')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'popover')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -3227,9 +3483,9 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
     &lt;hr /&gt;
     &lt;h4&gt;Triggers&lt;/h4&gt;
     &lt;p&gt;
-      &lt;button uib-popover=&quot;I appeared on mouse enter!&quot; popover-trigger=&quot;mouseenter&quot; type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Mouseenter&lt;/button&gt;
+      &lt;button uib-popover=&quot;I appeared on mouse enter!&quot; popover-trigger=&quot;&#x27;mouseenter&#x27;&quot; type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Mouseenter&lt;/button&gt;
     &lt;/p&gt;
-    &lt;input type=&quot;text&quot; value=&quot;Click me!&quot; uib-popover=&quot;I appeared on focus! Click away and I&#x27;ll vanish...&quot;  popover-trigger=&quot;focus&quot; class=&quot;form-control&quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;Click me!&quot; uib-popover=&quot;I appeared on focus! Click away and I&#x27;ll vanish...&quot;  popover-trigger=&quot;&#x27;focus&#x27;&quot; class=&quot;form-control&quot;&gt;
 
     &lt;hr /&gt;
     &lt;h4&gt;Other&lt;/h4&gt;
@@ -3237,6 +3493,7 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
     &lt;button uib-popover=&quot;I have a title!&quot; popover-title=&quot;The title.&quot; type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;title&lt;/button&gt;
     &lt;button uib-popover=&quot;I am activated manually&quot; popover-is-open=&quot;popoverIsOpen&quot; ng-click=&quot;popoverIsOpen = !popoverIsOpen&quot; type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Toggle popover&lt;/button&gt;
     &lt;button uib-popover-html=&quot;htmlPopover&quot; class=&quot;btn btn-default&quot;&gt;HTML Popover&lt;/button&gt;
+    &lt;button uib-popover-html=&quot;&#x27;&lt;b&gt;HTML&lt;/b&gt;, &lt;i&gt;inline&lt;/i&gt;&#x27;&quot; class=&quot;btn btn-default&quot;&gt;HTML Popover (inline)&lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
                                         </div>
@@ -3390,12 +3647,55 @@ The element to get the offset parent for.</li>
 <li><em>(Type: <code>element</code>)</em> -
 The closest positioned ancestor.</li>
 </ul>
-<h4 id="scrollbarwidth-">scrollbarWidth()</h4>
+<h4 id="scrollbarwidth-isbody-">scrollbarWidth(isBody)</h4>
 <p>Calculates the browser scrollbar width and caches the result for future calls.  Concept from the TWBS measureScrollbar() function in <a href="https://github.com/twbs/bootstrap/blob/master/js/modal.js">modal.js</a>.</p>
+<h5 id="parameters">parameters</h5>
+<ul>
+<li><code>isBody</code>
+<em>(Type: <code>boolean</code>, Default: <code>false</code>, optional)</em> - Is the requested scrollbar width for the body/html element.  IE and Edge overlay the scrollbar on the body/html element and should be considered 0.</li>
+</ul>
 <h5 id="returns">returns</h5>
 <ul>
 <li><em>(Type: <code>number</code>)</em> -
 The width of the browser scrollbar.</li>
+</ul>
+<h4 id="scrollbarpadding-element-">scrollbarPadding(element)</h4>
+<p>Calculates the padding required to replace the scrollbar on an element.</p>
+<h5 id="parameters">parameters</h5>
+<ul>
+<li>&#39;element&#39; <em>(Type: <code>element</code>)</em> - The element to calculate the padding on (should be a scrollable element).</li>
+</ul>
+<h5 id="returns">returns</h5>
+<p>An object with the following properties:</p>
+<ul>
+<li><p><code>scrollbarWidth</code>
+<em>(Type: <code>number</code>)</em> -
+The width of the scrollbar.</p>
+</li>
+<li><p><code>widthOverflow</code>
+<em>(Type: <code>boolean</code>)</em> -
+Whether the width is overflowing.</p>
+</li>
+<li><p><code>right</code>
+<em>(Type: <code>number</code>)</em> -
+The total right padding required to replace the scrollbar.</p>
+</li>
+<li><p><code>originalRight</code>
+<em>(Type: <code>number</code>)</em> -
+The oringal right padding on the element.</p>
+</li>
+<li><p><code>heightOverflow</code>
+<em>(Type: <code>boolean</code>)</em> -
+Whether the height is overflowing.</p>
+</li>
+<li><p><code>bottom</code>
+<em>(Type: <code>number</code>)</em> -
+The total bottom padding required to replace the scrollbar.</p>
+</li>
+<li><p><code>originalBottom</code>
+<em>(Type: <code>number</code>)</em> -
+The oringal bottom padding on the element.</p>
+</li>
 </ul>
 <h4 id="isscrollable-element-includehidden-">isScrollable(element, includeHidden)</h4>
 <p>Determines if an element is scrollable.</p>
@@ -3414,7 +3714,7 @@ The element to check.</p>
 <li><em>(Type: <code>boolean</code>)</em> -
 Whether the element is scrollable.</li>
 </ul>
-<h4 id="scrollparent-element-includehidden-">scrollParent(element, includeHidden)</h4>
+<h4 id="scrollparent-element-includehidden-includeself-">scrollParent(element, includeHidden, includeSelf)</h4>
 <p>Gets the closest scrollable ancestor.  Concept from the jQueryUI <a href="https://github.com/jquery/jquery-ui/blob/master/ui/scroll-parent.js">scrollParent.js</a>.</p>
 <h5 id="parameters">parameters</h5>
 <ul>
@@ -3424,6 +3724,9 @@ The element to get the closest scrollable ancestor for.</p>
 </li>
 <li><p><code>includeHidden</code>
 <em>(Type: <code>boolean</code>, Default: <code>false</code>, optional)</em> - Should scroll style of &#39;hidden&#39; be considered.</p>
+</li>
+<li><p><code>includeSelf</code>
+<em>(Type: <code>boolean</code>, Default: <code>false</code>, optional)</em> - Should the element passed in be included in the scrollable lookup.</p>
 </li>
 </ul>
 <h5 id="returns">returns</h5>
@@ -3627,7 +3930,7 @@ The placement for the element.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'position')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'position')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -3825,7 +4128,7 @@ The current value of progress completed.</p>
 </li>
 <li><p><code>type</code>
 <em>(Default: <code>null</code>)</em> -
-Bootstrap style type. Possible values are &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, and, &#39;error&#39; to use Bootstrap&#39;s pre-existing styling, or any desired custom suffix.</p>
+Bootstrap style type. Possible values are &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, and, &#39;danger&#39; to use Bootstrap&#39;s pre-existing styling, or any desired custom suffix.</p>
 </li>
 <li><p><code>title</code>
 <em>(Default: <code>progressbar</code>)</em> -
@@ -3839,7 +4142,7 @@ Title to use as label (for accessibility).</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'progressbar')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'progressbar')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -3971,7 +4274,7 @@ Title to use as label (for accessibility).</p>
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="RatingDemoCtrl">
     <h4>Default</h4>
-    <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+    <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
     <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
 
     <pre style="margin:15px 0;">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre>
@@ -3981,8 +4284,8 @@ Title to use as label (for accessibility).</p>
     <hr />
 
     <h4>Custom icons</h4>
-    <div ng-init="x = 5"><uib-rating ng-model="x" max="15" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1"></uib-rating> <b>(<i>Rate:</i> {{x}})</b></div>
-    <div ng-init="y = 2"><uib-rating ng-model="y" rating-states="ratingStates" aria-labelledby="custom-icons-2"></uib-rating> <b>(<i>Rate:</i> {{y}})</b></div>
+    <div ng-init="x = 5"><span uib-rating ng-model="x" max="15" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'" aria-labelledby="custom-icons-1"></span> <b>(<i>Rate:</i> {{x}})</b></div>
+    <div ng-init="y = 2"><span uib-rating ng-model="y" rating-states="ratingStates" aria-labelledby="custom-icons-2"></span> <b>(<i>Rate:</i> {{y}})</b></div>
 </div>
 
                             </div>
@@ -4051,14 +4354,14 @@ A variable used in the template to specify the state for unselected icons.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'rating')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'rating')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;RatingDemoCtrl&quot;&gt;
     &lt;h4&gt;Default&lt;/h4&gt;
-    &lt;uib-rating ng-model=&quot;rate&quot; max=&quot;max&quot; read-only=&quot;isReadonly&quot; on-hover=&quot;hoveringOver(value)&quot; on-leave=&quot;overStar = null&quot; titles=&quot;[&#x27;one&#x27;,&#x27;two&#x27;,&#x27;three&#x27;]&quot; aria-labelledby=&quot;default-rating&quot;&gt;&lt;/uib-rating&gt;
+    &lt;span uib-rating ng-model=&quot;rate&quot; max=&quot;max&quot; read-only=&quot;isReadonly&quot; on-hover=&quot;hoveringOver(value)&quot; on-leave=&quot;overStar = null&quot; titles=&quot;[&#x27;one&#x27;,&#x27;two&#x27;,&#x27;three&#x27;]&quot; aria-labelledby=&quot;default-rating&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;label&quot; ng-class=&quot;{&#x27;label-warning&#x27;: percent&lt;30, &#x27;label-info&#x27;: percent&gt;=30 &amp;&amp; percent&lt;70, &#x27;label-success&#x27;: percent&gt;=70}&quot; ng-show=&quot;overStar &amp;&amp; !isReadonly&quot;&gt;{{percent}}%&lt;/span&gt;
 
     &lt;pre style=&quot;margin:15px 0;&quot;&gt;Rate: &lt;b&gt;{{rate}}&lt;/b&gt; - Readonly is: &lt;i&gt;{{isReadonly}}&lt;/i&gt; - Hovering over: &lt;b&gt;{{overStar || &quot;none&quot;}}&lt;/b&gt;&lt;/pre&gt;
@@ -4068,8 +4371,8 @@ A variable used in the template to specify the state for unselected icons.</p>
     &lt;hr /&gt;
 
     &lt;h4&gt;Custom icons&lt;/h4&gt;
-    &lt;div ng-init=&quot;x = 5&quot;&gt;&lt;uib-rating ng-model=&quot;x&quot; max=&quot;15&quot; state-on=&quot;&#x27;glyphicon-ok-sign&#x27;&quot; state-off=&quot;&#x27;glyphicon-ok-circle&#x27;&quot; aria-labelledby=&quot;custom-icons-1&quot;&gt;&lt;/uib-rating&gt; &lt;b&gt;(&lt;i&gt;Rate:&lt;/i&gt; {{x}})&lt;/b&gt;&lt;/div&gt;
-    &lt;div ng-init=&quot;y = 2&quot;&gt;&lt;uib-rating ng-model=&quot;y&quot; rating-states=&quot;ratingStates&quot; aria-labelledby=&quot;custom-icons-2&quot;&gt;&lt;/uib-rating&gt; &lt;b&gt;(&lt;i&gt;Rate:&lt;/i&gt; {{y}})&lt;/b&gt;&lt;/div&gt;
+    &lt;div ng-init=&quot;x = 5&quot;&gt;&lt;span uib-rating ng-model=&quot;x&quot; max=&quot;15&quot; state-on=&quot;&#x27;glyphicon-ok-sign&#x27;&quot; state-off=&quot;&#x27;glyphicon-ok-circle&#x27;&quot; aria-labelledby=&quot;custom-icons-1&quot;&gt;&lt;/span&gt; &lt;b&gt;(&lt;i&gt;Rate:&lt;/i&gt; {{x}})&lt;/b&gt;&lt;/div&gt;
+    &lt;div ng-init=&quot;y = 2&quot;&gt;&lt;span uib-rating ng-model=&quot;y&quot; rating-states=&quot;ratingStates&quot; aria-labelledby=&quot;custom-icons-2&quot;&gt;&lt;/span&gt; &lt;b&gt;(&lt;i&gt;Rate:&lt;/i&gt; {{y}})&lt;/b&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
                                         </div>
@@ -4148,7 +4451,7 @@ A variable used in the template to specify the state for unselected icons.</p>
 
   <uib-tabset active="active">
     <uib-tab index="0" heading="Static title">Static content</uib-tab>
-    <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+    <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
       {{tab.content}}
     </uib-tab>
     <uib-tab index="3" select="alertMe()">
@@ -4247,7 +4550,7 @@ Whether tabs appear vertically stacked.</p>
 </li>
 <li><p><code>deselect()</code>
 <small class="badge">$</small> -
-An optional expression called when tab is deactivated. Supports $event in template for expression.</p>
+An optional expression called when tab is deactivated. Supports <code>$event</code> and <code>$selectedIndex</code> in template for expression. You may call <code>$event.preventDefault()</code> in this event handler to prevent a tab change from occurring. The <code>$selectedIndex</code> can be used to determine which tab was attempted to be opened.</p>
 </li>
 <li><p><code>disable</code>
 <small class="badge">$</small>
@@ -4259,7 +4562,7 @@ Whether tab is clickable and can be activated.</p>
 Heading text.</p>
 </li>
 <li><p><code>index</code> -
-Tab index. Must be unique.</p>
+Tab index. Must be unique number or string.</p>
 </li>
 <li><p><code>select()</code>
 <small class="badge">$</small> -
@@ -4281,7 +4584,7 @@ A URL representing the location of a template to use for the tab heading.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'tabs')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'tabs')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -4305,7 +4608,7 @@ A URL representing the location of a template to use for the tab heading.</p>
 
   &lt;uib-tabset active=&quot;active&quot;&gt;
     &lt;uib-tab index=&quot;0&quot; heading=&quot;Static title&quot;&gt;Static content&lt;/uib-tab&gt;
-    &lt;uib-tab index=&quot;$index + 1&quot; ng-repeat=&quot;tab in tabs&quot; heading=&quot;{{tab.title}}&quot; active=&quot;tab.active&quot; disable=&quot;tab.disabled&quot;&gt;
+    &lt;uib-tab index=&quot;$index + 1&quot; ng-repeat=&quot;tab in tabs&quot; heading=&quot;{{tab.title}}&quot; disable=&quot;tab.disabled&quot;&gt;
       {{tab.content}}
     &lt;/uib-tab&gt;
     &lt;uib-tab index=&quot;3&quot; select=&quot;alertMe()&quot;&gt;
@@ -4421,7 +4724,7 @@ A URL representing the location of a template to use for the tab heading.</p>
                             <div class="col-md-6 show-grid">
                                 <div ng-controller="TimepickerDemoCtrl">
 
-  <uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
+  <div uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
 
   <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
 
@@ -4550,10 +4853,11 @@ Sets tabindex for each control in the timepicker.</p>
 <small class="badge">C</small>
 <em>(Defaults: <code>uib/template/timepicker/timepicker.html</code>)</em> -
 Add the ability to override the template used on the component.</p>
-<p><strong>Notes</strong></p>
-<p>If the model value is updated (i.e. via <code>Date.prototype.setDate</code>), you must update the model value by breaking the reference by <code>modelValue = new Date(modelValue)</code> in order to have the timepicker update.</p>
 </li>
 </ul>
+<p><strong>Notes</strong></p>
+<p>This component makes no claims of absolutely supporting the preservation of dates in all cases, and it is highly recommended that model tracking of dates is encapsulated in a different object. This component should not be used with the same model as the datepicker. This is due to edge cases with situations such as Daylight Savings timezone changes which require a modification of the date in order to prevent an impossible to increment or decrement situation. See <a href="https://github.com/angular-ui/bootstrap/issues/5485">#5485</a> for details.</p>
+<p>If the model value is updated (i.e. via <code>Date.prototype.setDate</code>), you must update the model value by breaking the reference by <code>modelValue = new Date(modelValue)</code> in order to have the timepicker update.</p>
 
                             </div>
                         </div>
@@ -4561,14 +4865,14 @@ Add the ability to override the template used on the component.</p>
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'timepicker')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'timepicker')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
                                         <div plunker-content="markup">
                                             <pre ng-non-bindable><code data-language="html">&lt;div ng-controller=&quot;TimepickerDemoCtrl&quot;&gt;
 
-  &lt;uib-timepicker ng-model=&quot;mytime&quot; ng-change=&quot;changed()&quot; hour-step=&quot;hstep&quot; minute-step=&quot;mstep&quot; show-meridian=&quot;ismeridian&quot;&gt;&lt;/uib-timepicker&gt;
+  &lt;div uib-timepicker ng-model=&quot;mytime&quot; ng-change=&quot;changed()&quot; hour-step=&quot;hstep&quot; minute-step=&quot;mstep&quot; show-meridian=&quot;ismeridian&quot;&gt;&lt;/div&gt;
 
   &lt;pre class=&quot;alert alert-info&quot;&gt;Time is: {{mytime | date:&#x27;shortTime&#x27; }}&lt;/pre&gt;
 
@@ -4705,7 +5009,9 @@ Add the ability to override the template used on the component.</p>
     </p>
 
     <p>
-        I can even contain HTML. <a href="#" uib-tooltip-html="htmlTooltip">Check me out!</a>
+        I can even contain HTML as a
+        <a href="#" uib-tooltip-html="htmlTooltip">scope variable</a> or
+        <a href="#" uib-tooltip-html="'static. {{dynamicTooltipText}}. <b>bold.</b>'">inline string</a>
     </p>
 
     <p>
@@ -4727,7 +5033,7 @@ Add the ability to override the template used on the component.</p>
 
     <div class="form-group">
       <label>Or use custom triggers, like focus: </label>
-      <input type="text" value="Click me!" uib-tooltip="See? Now click away..." tooltip-trigger="focus" tooltip-placement="right" class="form-control" />
+      <input type="text" value="Click me!" uib-tooltip="See? Now click away..." tooltip-trigger="'focus'" tooltip-placement="right" class="form-control" />
     </div>
 
     <div class="form-group" ng-class="{'has-error' : !inputModel}">
@@ -4736,7 +5042,7 @@ Add the ability to override the template used on the component.</p>
              placeholder="Hover over this for a tooltip until this is filled"
              uib-tooltip="Enter something in this input field to disable this tooltip"
              tooltip-placement="top"
-             tooltip-trigger="mouseenter"
+             tooltip-trigger="'mouseenter'"
              tooltip-enable="!inputModel" />
     </div>
     <div class="form-group">
@@ -4826,8 +5132,9 @@ For how long should the tooltip remain open after the close trigger event?</p>
 Popup delay in milliseconds until it opens.</p>
 </li>
 <li><p><code>tooltip-trigger</code>
-<em>(Default: <code>mouseenter</code>)</em> -
-What should trigger a show of the tooltip? Supports a space separated list of event names (see below).</p>
+<small class="badge">$</small>
+<em>(Default: <code>&#39;mouseenter&#39;</code>)</em> -
+What should trigger a show of the tooltip? Supports a space separated list of event names, or objects (see below).</p>
 </li>
 </ul>
 <p><strong>Note:</strong> To configure the tooltips, you need to do it on <code>$uibTooltipProvider</code> (also see below).</p>
@@ -4869,7 +5176,7 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'tooltip')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'tooltip')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -4905,7 +5212,9 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
     &lt;/p&gt;
 
     &lt;p&gt;
-        I can even contain HTML. &lt;a href=&quot;#&quot; uib-tooltip-html=&quot;htmlTooltip&quot;&gt;Check me out!&lt;/a&gt;
+        I can even contain HTML as a
+        &lt;a href=&quot;#&quot; uib-tooltip-html=&quot;htmlTooltip&quot;&gt;scope variable&lt;/a&gt; or
+        &lt;a href=&quot;#&quot; uib-tooltip-html=&quot;&#x27;static. {{dynamicTooltipText}}. &lt;b&gt;bold.&lt;/b&gt;&#x27;&quot;&gt;inline string&lt;/a&gt;
     &lt;/p&gt;
 
     &lt;p&gt;
@@ -4927,7 +5236,7 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
 
     &lt;div class=&quot;form-group&quot;&gt;
       &lt;label&gt;Or use custom triggers, like focus: &lt;/label&gt;
-      &lt;input type=&quot;text&quot; value=&quot;Click me!&quot; uib-tooltip=&quot;See? Now click away...&quot; tooltip-trigger=&quot;focus&quot; tooltip-placement=&quot;right&quot; class=&quot;form-control&quot; /&gt;
+      &lt;input type=&quot;text&quot; value=&quot;Click me!&quot; uib-tooltip=&quot;See? Now click away...&quot; tooltip-trigger=&quot;&#x27;focus&#x27;&quot; tooltip-placement=&quot;right&quot; class=&quot;form-control&quot; /&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;form-group&quot; ng-class=&quot;{&#x27;has-error&#x27; : !inputModel}&quot;&gt;
@@ -4936,7 +5245,7 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
              placeholder=&quot;Hover over this for a tooltip until this is filled&quot;
              uib-tooltip=&quot;Enter something in this input field to disable this tooltip&quot;
              tooltip-placement=&quot;top&quot;
-             tooltip-trigger=&quot;mouseenter&quot;
+             tooltip-trigger=&quot;&#x27;mouseenter&#x27;&quot;
              tooltip-enable=&quot;!inputModel&quot; /&gt;
     &lt;/div&gt;
     &lt;div class=&quot;form-group&quot;&gt;
@@ -5059,10 +5368,10 @@ Provide a set of defaults for certain tooltip and popover attributes. Currently 
     <p class="message">select location from drop down.</p>
 
     <ul class="dropdown-menu" role="listbox">
-        <li ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }"
-            ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
-            <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
-        </li>
+      <li class="uib-typeahead-match" ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }"
+        ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
+        <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+      </li>
     </ul>
   </div>
 </script>
@@ -5172,6 +5481,11 @@ Minimal no of characters that needs to be entered before typeahead kicks-in. Mus
 <em>(Default: <code>angular.noop</code>)</em> -
 Binding to a variable that indicates if no matching results were found.</p>
 </li>
+<li><p><code>typeahead-should-select($event)</code>
+<small class="badge">$</small>
+<em>(Default: <code>null</code>)</em> -
+A callback executed when a <code>keyup</code> event that might trigger a selection occurs. Selection will only occur if this function returns true.</p>
+</li>
 <li><p><code>typeahead-on-select($item, $model, $label, $event)</code>
 <small class="badge">$</small>
 <em>(Default: <code>null</code>)</em> -
@@ -5212,6 +5526,8 @@ Minimal wait time after last character typed before typeahead kicks-in.</p>
 Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.directive:select">select directive</a>).</p>
 </li>
 </ul>
+<p><strong>Notes</strong></p>
+<p>If a custom template for the popup is used, the wrapper selector used for the match items is the <code>uib-typeahead-match</code> class.</p>
 
                             </div>
                         </div>
@@ -5219,7 +5535,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                         <div class="row code">
                             <div class="col-md-12" ng-controller="PlunkerCtrl">
                                 <div class="pull-right">
-                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.0', '3.3.6', '1.2.5', 'typeahead')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+                                    <button type="button" class="btn btn-info plunk-btn" ng-click="edit('1.5.5', '3.3.6', '2.0.1', 'typeahead')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
                                 </div>
                                 <uib-tabset active="activeTab">
                                     <uib-tab index="0" heading="Markup">
@@ -5268,10 +5584,10 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
     &lt;p class=&quot;message&quot;&gt;select location from drop down.&lt;/p&gt;
 
     &lt;ul class=&quot;dropdown-menu&quot; role=&quot;listbox&quot;&gt;
-        &lt;li ng-repeat=&quot;match in matches track by $index&quot; ng-class=&quot;{active: isActive($index) }&quot;
-            ng-mouseenter=&quot;selectActive($index)&quot; ng-click=&quot;selectMatch($index)&quot; role=&quot;option&quot; id=&quot;{{::match.id}}&quot;&gt;
-            &lt;div uib-typeahead-match index=&quot;$index&quot; match=&quot;match&quot; query=&quot;query&quot; template-url=&quot;templateUrl&quot;&gt;&lt;/div&gt;
-        &lt;/li&gt;
+      &lt;li class=&quot;uib-typeahead-match&quot; ng-repeat=&quot;match in matches track by $index&quot; ng-class=&quot;{active: isActive($index) }&quot;
+        ng-mouseenter=&quot;selectActive($index)&quot; ng-click=&quot;selectMatch($index)&quot; role=&quot;option&quot; id=&quot;{{::match.id}}&quot;&gt;
+        &lt;div uib-typeahead-match index=&quot;$index&quot; match=&quot;match&quot; query=&quot;query&quot; template-url=&quot;templateUrl&quot;&gt;&lt;/div&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/script&gt;
@@ -5442,7 +5758,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
     </div>
     <div class="modal-footer">
         <a class="btn btn-default" ng-click="cancel()">Close</a>
-        <a class="btn btn-primary" ng-href="{{download('1.2.5')}}" download><i class="glyphicon glyphicon-download-alt"></i> Download 1.2.5</a>
+        <a class="btn btn-primary" ng-href="{{download('2.0.1')}}" download><i class="glyphicon glyphicon-download-alt"></i> Download 2.0.1</a>
     </div>
 </script>
 <script type="text/ng-template" id="buildModal.html">
@@ -5480,6 +5796,17 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
+               ng-class="{'btn-primary': module.tabindex}"
+               ng-model="module.tabindex"
+               uib-btn-checkbox
+               ng-change="selectedChanged('tabindex', module.tabindex)">
+                  Tabindex
+              </button>
+              
+            
+              
+              <button type="button" class="btn btn-default"
+               style="width: 33%; border-radius: 0;"
                ng-class="{'btn-primary': module.accordion}"
                ng-model="module.accordion"
                uib-btn-checkbox
@@ -5487,7 +5814,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Accordion
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5498,11 +5829,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Alert
               </button>
               
-                </div>
-              
             
-              
-                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5524,7 +5851,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Carousel
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5535,11 +5866,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Dateparser
               </button>
               
-                </div>
-              
             
-              
-                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5548,17 +5875,6 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                uib-btn-checkbox
                ng-change="selectedChanged('isClass', module.isClass)">
                   Is Class
-              </button>
-              
-            
-              
-              <button type="button" class="btn btn-default"
-               style="width: 33%; border-radius: 0;"
-               ng-class="{'btn-primary': module.position}"
-               ng-model="module.position"
-               uib-btn-checkbox
-               ng-change="selectedChanged('position', module.position)">
-                  Position
               </button>
               
             
@@ -5580,6 +5896,28 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
+               ng-class="{'btn-primary': module.position}"
+               ng-model="module.position"
+               uib-btn-checkbox
+               ng-change="selectedChanged('position', module.position)">
+                  Position
+              </button>
+              
+            
+              
+              <button type="button" class="btn btn-default"
+               style="width: 33%; border-radius: 0;"
+               ng-class="{'btn-primary': module.datepickerPopup}"
+               ng-model="module.datepickerPopup"
+               uib-btn-checkbox
+               ng-change="selectedChanged('datepickerPopup', module.datepickerPopup)">
+                  Datepicker Popup
+              </button>
+              
+            
+              
+              <button type="button" class="btn btn-default"
+               style="width: 33%; border-radius: 0;"
                ng-class="{'btn-primary': module.debounce}"
                ng-model="module.debounce"
                uib-btn-checkbox
@@ -5587,7 +5925,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Debounce
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5609,11 +5951,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Stacked Map
               </button>
               
-                </div>
-              
             
-              
-                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5624,7 +5962,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Modal
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5646,11 +5988,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Pager
               </button>
               
-                </div>
-              
             
-              
-                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5661,7 +5999,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Pagination
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5683,11 +6025,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Popover
               </button>
               
-                </div>
-              
             
-              
-                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5698,7 +6036,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Progressbar
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5720,11 +6062,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Tabs
               </button>
               
-                </div>
-              
             
-              
-                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5735,7 +6073,11 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
                   Timepicker
               </button>
               
+                </div>
+              
             
+              
+                <div class="btn-group" style="width: 100%;">
               
               <button type="button" class="btn btn-default"
                style="width: 33%; border-radius: 0;"
@@ -5753,7 +6095,7 @@ Comprehension Angular expression (see <a href="http://docs.angularjs.org/api/ng.
         <a class="btn btn-default" ng-click="cancel()">Close</a>
         <a class="btn btn-primary" ng-hide="isOldBrowser()"
             ng-disabled="isOldBrowser() !== false && !selectedModules.length"
-            ng-click="selectedModules.length && build(selectedModules, '1.2.5')">
+            ng-click="selectedModules.length && build(selectedModules, '2.0.1')">
             <i class="glyphicon glyphicon-download-alt"></i> Download {{selectedModules.length}} Modules
         </a>
     </div>
